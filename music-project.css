@@ -1,0 +1,147 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient( rgb(175, 175, 255), white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.player {
+  background: linear-gradient(#564eaf, rgb(187, 187, 255));
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 320px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cover img {
+  width: 90%;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.cover img:hover { 
+  width: 100%;
+}
+
+.track-info h2 {
+  font-size: 1.4rem;
+  margin: 1rem 0 0.2rem;
+}
+
+.track-info p {
+  color: #ffffffc6;
+  margin: 0 0 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  background: #f3f3fc;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.progress-bar {
+  background: #ddd;
+  border-radius: 20px;
+  height: 8px;
+  overflow: hidden;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.progress-filled {
+  background: #000;
+  height: 100%;
+  width: 0%;
+  transition: width 0.2s;
+}
+
+.btn-lyrics {
+  margin: 1rem 0;
+  padding: 0.6rem 1.2rem;
+  background: #f0f0f5;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn-lyrics:hover {
+  background: #000;
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.lyrics-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 320px;
+  height: 100vh;
+  background: linear-gradient(rgb(171, 171, 255), white);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  z-index: 999;
+  transition: right 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.lyrics-panel.active {
+  right: 0;
+}
+
+.close-lyrics {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.2s ease;
+}
+
+.close-lyrics:hover {
+  color: #333;
+}
+
+.lyrics-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.lyrics-text {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  flex-grow: 1;
+}
